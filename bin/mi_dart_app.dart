@@ -106,7 +106,41 @@ void main(List<String> arguments) {
       break;
 
     case "5":
-      // Eliminar un usuario
+      print("========== NÚMEROS PRIMOS EN RANGO ==========");
+      print("Ingrese el número inicial del rango:");
+      String? input1 = stdin.readLineSync();
+      print("Ingrese el número final del rango:");
+      String? input2 = stdin.readLineSync();
+
+      if (input1 != null && input2 != null) {
+        int inicio = int.parse(input1);
+        int fin = int.parse(input2);
+        List<int> primos = [];
+
+      bool esPrimo(int numero) {
+          if (numero <= 1) return false;
+          if (numero == 2) return true;
+          if (numero % 2 == 0) return false;
+
+        for (int i = 3; i <= numero ~/ 2; i += 2) {
+          if (numero % i == 0) return false;
+          }
+        return true;
+        }
+
+
+        for (int i = inicio; i <= fin; i++) {
+          if (esPrimo(i)) {
+            primos.add(i);
+          }
+        }
+
+        print("Números primos encontrados entre $inicio y $fin:");
+        print(primos.join(", "));
+        print("Total de números primos: ${primos.length}");
+      } else {
+        print("Entrada no válida.");
+      }
       break;
     case "6":
       // Salir
