@@ -19,10 +19,44 @@ void main(List<String> arguments) {
   opcion = stdin.readLineSync() ?? "0";
 
   switch (opcion) {
+    //suma 
     case "1":
-      // Crear un nuevo usuario
+    print("========== SUMA ==========");
+    print("Ingrese el primer número:");
+      String? input1 = stdin.readLineSync();
+      print("Ingrese el segundo número:");
+      String? input2 = stdin.readLineSync();
+      // Validar que las entradas no sean nulas y convertirlas a enteros
+      if (input1 != null && input2 != null) {
+        double num1 = double.parse(input1);
+        double num2 = double.parse(input2);
+        double resultado = num1 + num2;
+        print("El resultado de la suma es: $resultado");
+      } else {
+        print("Entrada no válida.");
+
+
+      }
       break;
+    
+    //resta
     case "2":
+     print("========== Resta ==========");
+    print("Ingrese el primer número:");
+      String? input1 = stdin.readLineSync();
+      print("Ingrese el segundo número:");
+      String? input2 = stdin.readLineSync();
+      // Validar que las entradas no sean nulas y convertirlas a enteros
+      if (input1 != null && input2 != null) {
+        double num1 = double.parse(input1);
+        double num2 = double.parse(input2);
+        double resultado = num1 - num2;
+        print("El resultado de la resta  es: $resultado");
+      } else {
+        print("Entrada no válida.");
+
+
+      }
       // Mostrar todos los usuarios
 
       break;
