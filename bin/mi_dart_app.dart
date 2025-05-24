@@ -19,11 +19,43 @@ void main(List<String> arguments) {
   opcion = stdin.readLineSync() ?? "0";
 
   switch (opcion) {
+    //suma 
     case "1":
-      // Crear un nuevo usuario
+    print("========== SUMA ==========");
+    print("Ingrese el primer número:");
+      String? input1 = stdin.readLineSync();
+      print("Ingrese el segundo número:");
+      String? input2 = stdin.readLineSync();
+      // Validar que las entradas no sean nulas y convertirlas a enteros
+      if (input1 != null && input2 != null) {
+        double num1 = double.parse(input1);
+        double num2 = double.parse(input2);
+        double resultado = num1 + num2;
+        print("El resultado de la suma es: $resultado");
+      } else {
+        print("Entrada no válidaaaaa.");
+      }
       break;
+    
+    //resta
     case "2":
-      // Mostrar todos loss usuarios
+     print("========== Resta ==========");
+    print("Ingrese el primer número:");
+      String? input1 = stdin.readLineSync();
+      print("Ingrese el segundo número:");
+      String? input2 = stdin.readLineSync();
+      // Validar que las entradas no sean nulas y convertirlas a enteros
+      if (input1 != null && input2 != null) {
+        double num1 = double.parse(input1);
+        double num2 = double.parse(input2);
+        double resultado = num1 - num2;
+        print("El resultado de la resta  es: $resultado");
+      } else {
+        print("Entrada no válida.");
+
+
+      }
+      // Mostrar todos los usuarios
 
       break;
     case "3":
@@ -65,11 +97,11 @@ void main(List<String> arguments) {
         } else {
           print("Error: No se puede dividir entre cero.");
         }
-
-        
       } else {
         print("Entrada no válida.");
       }
+
+      
       break;
 
     case "5":
@@ -79,12 +111,10 @@ void main(List<String> arguments) {
       // Salir
       break;
     case "7":
-      print("========== Secuencia de Fibonacci ==========");
       // Salir
       break;
     case "8":
       // Salir
-      print("========== Cálculo de Áreas Geométrica ==========");
       break;
     case "9":
       // Salir
