@@ -143,7 +143,34 @@ void main(List<String> arguments) {
         }
         break;
       case "6":
-        // Salir
+      // Numeros pare e impares en un rango
+      print("========== NÚMEROS PARES E IMPARES ==========");
+      print("Ingrese el número inicial del rango:");
+      String? input1 = stdin.readLineSync();
+      print("Ingrese el número final del rango:");
+      String? input2 = stdin.readLineSync();
+
+      if (input1 != null && input2 != null) {
+        int inicio = int.parse(input1);
+        int fin = int.parse(input2);
+        List<int> pares = [];
+        List<int> impares = [];
+
+        for (int i = inicio; i <= fin; i++) {
+          if (i % 2 == 0) {
+            pares.add(i);
+          } else {
+            impares.add(i);
+          }
+        }
+
+        print("Números pares entre $inicio y $fin:");
+        print(pares.join(", "));
+        print("Números impares entre $inicio y $fin:");
+        print(impares.join(", "));
+      } else {
+        print("Entrada no válida.");
+      }
         break;
         // secuencia fibonacci
       case "7":
