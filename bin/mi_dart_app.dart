@@ -145,7 +145,36 @@ void main(List<String> arguments) {
       case "6":
         // Salir
         break;
+        // secuencia fibonacci
       case "7":
+      print("========== SECUENCIA DE FIBONACCI ==========");
+      print("¿Cuántos términos desea generar?");
+      String? input = stdin.readLineSync();
+
+      if (input != null) {
+        int n = int.parse(input);
+        if (n <= 0) {
+          print("Debe ingresar un número mayor que cero.");
+        } else {
+          List<int> fibonacci = [];
+
+          for (int i = 0; i < n; i++) {
+            if (i == 0) {
+              fibonacci.add(0);
+            } else if (i == 1) {
+              fibonacci.add(1);
+            } else {
+              fibonacci.add(fibonacci[i - 1] + fibonacci[i - 2]);
+            }
+          }
+
+          print("Los primeros $n términos de la secuencia de Fibonacci son:");
+          print(fibonacci.join(", "));
+        }
+        
+      } else {
+        print("Entrada no válida.");
+      }
         // Salir
         break;
       case "8":
