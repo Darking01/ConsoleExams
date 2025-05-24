@@ -65,6 +65,8 @@ void main(List<String> arguments) {
         } else {
           print("Error: No se puede dividir entre cero.");
         }
+
+        
       } else {
         print("Entrada no válida.");
       }
